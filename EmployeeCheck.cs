@@ -19,7 +19,7 @@ namespace EmployeeWageProblem
 
             Random randomno = new Random();
             int ECheck = randomno.Next(2);
-            Console.WriteLine("Today Employee Attendence Status is: "+ECheck);
+            Console.WriteLine("Today Employee Attendence Status is: " + ECheck);
             if (ECheck == full_time)
             {
                 Console.WriteLine("Employee is Present.");
@@ -35,7 +35,3 @@ namespace EmployeeWageProblem
         }
     }
 }
-
-        
-   
-
