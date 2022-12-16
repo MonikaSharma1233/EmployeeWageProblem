@@ -7,6 +7,7 @@ class Program
     {
         Console.WriteLine("Welcome to EmployeeWageProblem.");
         EmployeeCheck.CheckAttendence();
+        Console.ReadKey();
     }
 }
 
