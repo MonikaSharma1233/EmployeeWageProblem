@@ -5,10 +5,10 @@ class Program
 {
     public static void Main(String[] args)
     {
+
          Console.WriteLine("Welcome to EmployeeWageProblem.");
          EmployeeCheck.CheckAttendence();
          Console.ReadKey();
-     
     }
 } 
 
