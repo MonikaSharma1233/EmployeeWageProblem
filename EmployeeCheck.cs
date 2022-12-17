@@ -10,8 +10,10 @@ namespace EmployeeWageProblem
     {
         public const int full_time = 1;
         public const int part_time = 2;
-        public const int No_of_working_days = 20;
         public const int per_Hour = 20;
+        public const int totalHrs_in_month = 100;
+        public const int total_Working_days = 20;
+
         public static void CheckAttendence()
         {
 
@@ -20,13 +22,16 @@ namespace EmployeeWageProblem
             int emp_Hour = 0;
             int emp_Wage = 0;
             int totalwage = 0;
+            int totalworking_days = 0;
+            int totalworking_hrs = 0;
 
-            for (int day = 1; day <= No_of_working_days; day++)
+            while(totalworking_hrs<totalHrs_in_month && totalworking_days<total_Working_days)
             {
 
                 Random randomno = new Random();
                 int ECheck = randomno.Next(3);
                 // Console.WriteLine("Today Employee Attendence Status is: "+ECheck);
+                totalworking_days++;
                 switch (ECheck)
                 {
                     case full_time:
@@ -41,12 +46,14 @@ namespace EmployeeWageProblem
                         emp_Hour = 0;
                         break;
                 }
-                emp_Wage = emp_Hour * per_Hour;
-                totalwage=totalwage+emp_Wage;
-                Console.WriteLine("Day: " + day + " Wage: " + emp_Wage);
+                totalworking_hrs = totalworking_hrs + emp_Hour;
+                
+
+                
             }
-            
-            Console.WriteLine("wage of Employee of 20 days: " + totalwage + " Rs.");
+            Console.WriteLine("Total working hours: " + totalworking_hrs + " Working Days: " + totalworking_days);
+            totalwage = totalworking_hrs * per_Hour;
+            Console.WriteLine("wage of Employee of 20 Working Days: " + totalwage + " Rs.");
         }
     }
 }
